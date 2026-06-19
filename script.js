@@ -1,29 +1,27 @@
-function toggleLogin() {
-    let pass = document.getElementById("loginPass");
+function togglePassword() {
+    let password = document.getElementById("password");
 
-    if(pass.type === "password"){
-        pass.type = "text";
+    if (password.type === "password") {
+        password.type = "text";
     } else {
-        pass.type = "password";
+        password.type = "password";
     }
 }
 
 function validateForm() {
 
-    let password =
-        document.getElementById("password").value;
+    let password = document.getElementById("password").value;
+    let confirm = document.getElementById("confirm").value;
 
-    let confirm =
-        document.getElementById("confirm").value;
-
-    if(password !== confirm){
-        alert("Passwords do not match");
+    if (password.length < 6) {
+        alert("Password must be at least 6 characters long!");
         return;
     }
 
-    alert("Registration Successful");
-}
+    if (password !== confirm) {
+        alert("Passwords do not match!");
+        return;
+    }
 
-document.querySelector(".btn-primary").addEventListener("click", function() {
-    alert("Login Successful!");
-});
+    alert("Registration Successful!");
+}
