@@ -81,3 +81,12 @@ a{
         transform:translateY(0);
     }
 }
+.rule{
+    color: #888;
+    transition: 0.3s;
+}
+
+.valid{
+    color: green;
+    font-weight: 600;
+}
