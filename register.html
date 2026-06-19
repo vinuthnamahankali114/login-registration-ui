@@ -15,9 +15,21 @@
 
         <input type="email" id="email" class="form-control mb-3" placeholder="Email">
 
-        <input type="password" id="password" class="form-control mb-3" placeholder="Password">
+        <!-- Password with Eye Icon -->
+        <div class="input-group mb-3">
+            <input type="password" id="password"
+                   class="form-control"
+                   placeholder="Password">
 
-        <input type="password" id="confirm" class="form-control mb-3" placeholder="Confirm Password">
+            <span class="input-group-text"
+                  onclick="togglePassword()"
+                  style="cursor:pointer;">
+            </span>
+        </div>
+
+        <input type="password" id="confirm"
+               class="form-control mb-3"
+               placeholder="Confirm Password">
 
         <button onclick="validateForm()" class="btn btn-success w-100">
             Register
