@@ -20,7 +20,7 @@ body{
     padding:35px;
     border-radius:20px;
     box-shadow:0 10px 30px rgba(0,0,0,0.08);
-    animation:fadeIn 0.8s ease;
+    animation:slideUp 0.8s ease;
 }
 
 h2{
@@ -57,18 +57,14 @@ a{
     font-weight:600;
 }
 
-@keyframes fadeIn{
-    from{
-        opacity:0;
-        transform:translateY(20px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+.rule{
+    color:#888;
+    transition:0.3s;
 }
-.form-box{
-    animation: slideUp 0.8s ease;
+
+.valid{
+    color:green;
+    font-weight:600;
 }
 
 @keyframes slideUp{
@@ -76,17 +72,18 @@ a{
         opacity:0;
         transform:translateY(30px);
     }
+
     to{
         opacity:1;
         transform:translateY(0);
     }
 }
-.rule{
-    color: #888;
-    transition: 0.3s;
-}
 
-.valid{
-    color: green;
-    font-weight: 600;
+@media(max-width:576px){
+
+    .form-box{
+        padding:25px;
+        margin:15px;
+    }
+
 }
